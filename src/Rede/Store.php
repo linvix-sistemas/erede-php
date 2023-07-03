@@ -11,6 +11,12 @@ class Store
     private Environment $environment;
 
     /**
+     * Configure to generate an exception or not.
+     * @var bool
+     */
+    private bool $ignoreException = false;
+
+    /**
      * Creates a store.
      *
      * @param string           $filiation
@@ -76,6 +82,25 @@ class Store
     public function setToken(string $token): static
     {
         $this->token = $token;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getIgnoreException(): ?bool
+    {
+        return $this->ignoreException;
+    }
+
+    /**
+     * @param bool $ignoreException Configure to generate an exception or not.
+     *
+     * @return $this
+     */
+    public function setIgnoreException(bool $ignoreException): static
+    {
+        $this->ignoreException = $ignoreException;
         return $this;
     }
 }

@@ -104,13 +104,15 @@ abstract class AbstractTransactionsService extends AbstractService
             $previous = $e;
         }
 
-        if ($statusCode >= 400) {
-            throw new RedeException(
-                $this->transaction->getReturnMessage() ?? 'Error on getting the content from the API',
-                (int) $this->transaction->getReturnCode(),
-                $this->transaction,
-                $previous
-            );
+        if ($this->store->getIgnoreException() === false) {
+            if ($statusCode >= 400) {
+                throw new RedeException(
+                    $this->transaction->getReturnMessage() ?? 'Error on getting the content from the API',
+                    (int) $this->transaction->getReturnCode(),
+                    $this->transaction,
+                    $previous
+                );
+            }
         }
 
         return $this->transaction;
