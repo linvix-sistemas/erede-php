@@ -27,6 +27,11 @@ class Brand
     private $authorizationCode = null;
 
     /**
+     * @var string|null
+     */
+    private $brandTid;
+
+    /**
      * @return string|null
      */
     public function getName(): ?string
@@ -96,6 +101,25 @@ class Brand
     public function setAuthorizationCode(string $authorizationCode): Brand
     {
         $this->authorizationCode = $authorizationCode;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBrandTid()
+    {
+        return $this->brandTid;
+    }
+
+    /**
+     * @param mixed $brandTid
+     *
+     * @return Brand
+     */
+    public function setBrandTid(string $brandTid): Brand
+    {
+        $this->brandTid = $brandTid;
         return $this;
     }
 }
