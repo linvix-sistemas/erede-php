@@ -32,6 +32,11 @@ class Brand
     private $brandTid;
 
     /**
+     * @var string|null
+     */
+    private $merchantAdviceCode;
+
+    /**
      * @return string|null
      */
     public function getName(): ?string
@@ -120,6 +125,25 @@ class Brand
     public function setBrandTid(string $brandTid): Brand
     {
         $this->brandTid = $brandTid;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMerchantAdviceCode()
+    {
+        return $this->merchantAdviceCode;
+    }
+
+    /**
+     * @param mixed $merchantAdviceCode
+     *
+     * @return Brand
+     */
+    public function setMerchantAdviceCode(string $merchantAdviceCode): Brand
+    {
+        $this->merchantAdviceCode = $merchantAdviceCode;
         return $this;
     }
 }
