@@ -13,7 +13,7 @@ use Rede\Service\GetTransactionService;
  */
 class eRede
 {
-    public const VERSION = '6.1.0';
+    public const VERSION    = '6.1.0';
     public const USER_AGENT = 'eRede/' . eRede::VERSION . ' (PHP %s; Store %s; %s %s) %s';
 
     /**
@@ -68,7 +68,7 @@ class eRede
      */
     public function platform(string $platform, string $platformVersion): static
     {
-        $this->platform = $platform;
+        $this->platform        = $platform;
         $this->platformVersion = $platformVersion;
 
         return $this;
@@ -151,8 +151,8 @@ class eRede
      */
     public function zero(Transaction $transaction): Transaction
     {
-        $amount = (int) $transaction->getAmount();
-        $capture = (bool)$transaction->getCapture();
+        $amount  = (int) $transaction->getAmount();
+        $capture = (bool) $transaction->getCapture();
 
         $transaction->setAmount(0);
         $transaction->capture();
