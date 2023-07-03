@@ -107,7 +107,8 @@ abstract class AbstractTransactionsService extends AbstractService
         if ($statusCode >= 400) {
             throw new RedeException(
                 $this->transaction->getReturnMessage() ?? 'Error on getting the content from the API',
-                (int)$this->transaction->getReturnCode(),
+                (int) $this->transaction->getReturnCode(),
+                $this->transaction,
                 $previous
             );
         }
