@@ -27,8 +27,7 @@ Se já possui um arquivo `composer.json`, basta adicionar a seguinte dependênci
 ```json
 {
 "require": {
-    "developersrede/erede-php": "*"
-}
+    "linvix-sistemas/erede-php": "*"
 }
 
 ```
