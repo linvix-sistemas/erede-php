@@ -1,6 +1,6 @@
 {
-  "name": "developersrede/erede-php",
-  "version": "5.2.1",
+  "name": "linvix-sistemas/erede-php",
+  "version": "1.0.0",
   "description": "e.Rede integration SDK",
   "minimum-stability": "stable",
   "license": "MIT",
