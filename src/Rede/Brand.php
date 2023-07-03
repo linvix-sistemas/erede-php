@@ -15,10 +15,16 @@ class Brand
      * @var string|null
      */
     private ?string $returnCode = null;
+
     /**
      * @var string|null
      */
     private ?string $returnMessage = null;
+
+    /**
+     * @var string
+     */
+    private $authorizationCode = null;
 
     /**
      * @return string|null
@@ -71,6 +77,25 @@ class Brand
     public function setReturnMessage(?string $returnMessage): Brand
     {
         $this->returnMessage = $returnMessage;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getAuthorizationCode()
+    {
+        return $this->authorizationCode;
+    }
+
+    /**
+     * @param string $authorizationCode
+     *
+     * @return Brand
+     */
+    public function setAuthorizationCode(string $authorizationCode): Brand
+    {
+        $this->authorizationCode = $authorizationCode;
         return $this;
     }
 }
