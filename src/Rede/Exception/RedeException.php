@@ -11,7 +11,7 @@ class RedeException extends RuntimeException
 
     private Transaction $transaction;
 
-    public function __construct(string $message = "", int $code = 0, Transaction $transaction, ?Throwable $previous = null)
+    public function __construct(string $message = "", int $code = 0, Transaction $transaction = null, Throwable $previous = null)
     {
         parent::__construct($message, $code, $previous);
 
