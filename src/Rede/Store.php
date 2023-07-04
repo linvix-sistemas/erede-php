@@ -11,7 +11,7 @@ class Store
     private Environment $environment;
 
     /**
-     * Configure to generate an exception or not.
+     * Should it throw an exception?
      * @var bool
      */
     private bool $ignoreException = false;
@@ -94,7 +94,7 @@ class Store
     }
 
     /**
-     * @param bool $ignoreException Configure to generate an exception or not.
+     * @param bool $ignoreException Configure to not generate an exception.
      *
      * @return $this
      */
